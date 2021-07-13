@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/payment.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Payment-Machathon</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="myCard">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="main">
+              <div class="button-box">
+                <button id="credit" type="button" class="toggle-btn selected">Credit Card</button>
+                <button id="vodafon" type="button" class="toggle-btn ">Vodafon Cash</button>
+                <button id="aman" type="button" class="toggle-btn ">Aman</button>
+              </div>
+              <form id="sec1" class="myForm text-center" method="POST" onsubmit="return validateVisaForm()">
+                    <br> 
+                    <div class="form-group">
+                    <input id="visa-full-name" type="text" class="myInput" placeholder="Full name (on the card)">
+                    <br>
+                    <small id="error-visa-name"></small> 
+                    </div>
+                      
+                    <div class="form-group">    
+                      <input id="visa-card-number" type="text" class="myInput" placeholder="Card number, ex: 4586 XXXX XXXX XXXX" maxlength="16">
+                      <br>
+                      <small id="error-visa-card"></small> 
+                    </div> 
+                      
+                    <br>
+                    <div class="form-group left"> 
+                        <label class="label_style">Expiration:</label>
+                        <br>  
+                        <input id="visa-mm" type="text" class="myInput expire" placeholder="MM" maxlength="2">
+                        <input id="visa-yy" type="text" class="myInput expire" placeholder="YY" maxlength="2">
+                        <br>
+                        <small id="error-visa-expiration"></small> 
+                    </div> 
+
+                    <div class="form-group right"> 
+                        <label class="label_style">CVV:</label><br>  
+                        <input id="visa-cvv-number" type="text" class="myInput expire" placeholder="ex: 123" maxlength="4">
+                        <br>
+                        <small id="error-visa-CVV"></small>
+                    </div> 
+                       
+                      <br><br><br><br><br><br>
+                      <input id="vSubmit" type="submit" name="sub" class="butt" value="Pay">
+                    </form>
+              <form id="sec2" class="myForm text-center display" method="POST" onsubmit="return validateVodafonForm()">
+                <br>
+                <div class="form-group">    
+                      <input id="vodafon-card-number" type="text" class="myInput" placeholder="Card number, ex: 4586 XXXX XXXX XXXX" maxlength="16">
+                      <br>
+                      <small id="error-vodafon-card"></small> 
+                    </div> 
+                      
+                    <br>
+                    <div class="form-group left"> 
+                        <label class="label_style">Expiration:</label>
+                        <br>  
+                        <input id="vodafon-mm" type="text" class="myInput expire" placeholder="MM" maxlength="2">
+                        <input id="vodafon-yy" type="text" class="myInput expire" placeholder="YY" maxlength="2">
+                        <br>
+                        <small id="error-vodafon-expiration"></small> 
+                    </div> 
+
+                    <div class="form-group right"> 
+                        <label class="label_style">CVV:</label><br>  
+                        <input id="vodafon-cvv-number" type="text" class="myInput expire" placeholder="ex: 123" maxlength="4">
+                        <br>
+                        <small id="error-vodafon-CVV"></small>
+                    </div> 
+                       
+                      <br><br><br><br><br><br>
+                      <input id="voSubmit" type="submit" name="sub" class="butt" value="Pay">
+              </form>
+              <form id="sec3" class="myForm text-center display" method="POST" onsubmit="return validateVodafonForm()">
+                <br>
+                <div class="form-group">    
+                      <input id="vodafon-card-number" type="text" class="myInput" placeholder="Card number, ex: 4586 XXXX XXXX XXXX">
+                      <br>
+                      <small id="error-vodafon-card"></small> 
+                    </div> 
+                      
+                    <br>
+                    <div class="form-group left"> 
+                        <label class="label_style">Expiration:</label>
+                        <br>  
+                        <input id="vodafon-mm" type="text" class="myInput expire" placeholder="MM" >
+                        <input id="vodafon-yy" type="text" class="myInput expire" placeholder="YY" >
+                        <br>
+                        <small id="error-vodafon-expiration"></small> 
+                    </div> 
+
+                    <div class="form-group right"> 
+                        <label class="label_style">CVV:</label><br>  
+                        <input id="vodafon-cvv-number" type="text" class="myInput expire" placeholder="ex: 123">
+                        <br>
+                        <small id="error-vodafon-CVV"></small>
+                    </div> 
+                       
+                      <br><br><br><br><br><br>
+                      <input id="voSubmit" type="submit" name="sub" class="butt" value="Pay">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/popper.main.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/payment.js"></script>
+  </body>
+</html>
